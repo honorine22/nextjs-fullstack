@@ -1,6 +1,6 @@
 const Room = require('../models/room')
 const rooms = require('../data/rooms')
-const mongoose = require('mongoose')
+import mongoose from 'mongoose';
 
 mongoose.connect('mongodb://localhost:27017/roomDB', {
     useNewUrlParser: true,
