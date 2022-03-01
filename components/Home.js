@@ -42,7 +42,7 @@ const Home = () => {
             </div>
             <div className='grid mt-4 items-center grid-cols-1 lg:grid-cols-4 gap-y-16 gap-x-8'>
                 {rooms && rooms.length === 0 ?
-                    <div className="text-red-200">No Rooms.</div>
+                    <div className="bg-white text-center -mr-60 mt-16 text-red-500">No Rooms.</div>
                     :
                     rooms.map(room => (
                         <RoomItem key={room._id} room={room} />
