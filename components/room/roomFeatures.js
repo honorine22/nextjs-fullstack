@@ -1,20 +1,57 @@
 import React from 'react'
-
-const roomFeatures = () => {
+const RoomFeatures = ({ room }) => {
+    const classes = 'dark:text-white font-light';
+    const notAllowed = 'fa pr-8 fa-times text-red-600'
+    const allowed = 'fa pr-8 fa-check text-green-600'
     return (
-        <div>
-            <h2 className='pt-8 font-bold dark:text-white text-black'>Features:</h2>
-            <p className='dark:text-white text-black font-light'>2 Guests</p>
-            <p className='dark:text-white text-black font-light'>2 Beds</p>
-            <p className='dark:text-white text-black font-light'>Breakfast</p>
-            <p className='dark:text-white text-black font-light'>Internet</p>
-            <p className='dark:text-white text-black font-light'>Air Conditioned</p>
-            <p className='dark:text-white text-black font-light'>Pets Allowed</p>
-            <p className='dark:text-white text-black font-light'>Room Cleaning</p>
+        <div className='flex flex-col'>
+            <h2 className='pb-4 font-bold text-2xl dark:text-white'>Features:</h2>
+            <div className="flex flex-row">
+                <i className="fa fa-cog pr-12 fa-fw fa-users" aria-hidden="true">
+                </i>
+                <p className={classes}>{room.guestCapacity} Guest(s)</p>
+            </div>
 
+            <div className="flex flex-row">
+                <i className="fa fa-cog pr-12 fa-fw fa-bed" aria-hidden="true">
+                </i>
+                <p className={classes}>{room.numOfBeds} Beds</p>
+            </div>
+
+            <div className="flex flex-row">
+                <i className={room.breakfast ? allowed : notAllowed}>
+                </i>
+                <p className={classes}>Breakfast</p>
+            </div>
+
+            <div className="flex flex-row">
+                <i className={room.internet ? allowed : notAllowed}>
+                </i>
+                <p className={classes}>Internet</p>
+            </div>
+            <div className="flex flex-row">
+                <i className='fa pr-12 fa-cog fa-fw fa-cutlery'>
+                </i>
+                <p className={classes}>Kitchen</p>
+            </div>
+            <div className="flex flex-row">
+                <i className={room.airConditioned ? allowed : notAllowed}>
+                </i>
+                <p className={classes}>Air Conditioned</p>
+            </div>
+            <div className="flex flex-row">
+                <i className={room.petsAllowed ? allowed : notAllowed}>
+                </i>
+                <p className={classes}>Pets Allowed</p>
+            </div>
+            <div className="flex flex-row">
+                <i className={room.roomCleaning ? allowed : notAllowed}>
+                </i>
+                <p className={classes}>Room Cleaning</p>
+            </div>
             <div className='flex flex-col'>
-                <h2 className='font-bold dark:text-white text-black'>Reviews</h2>
-                <div className="flex items-center mt-2.5">
+                <h2 className='font-bold dark:text-white'>Reviews</h2>
+                <div className="flex">
                     <div className='rating-outer text-blue-300'>
                         <div className="rating-inner"
                             style={{ width: `${(room.ratings / 5) * 100}%` }}>
@@ -28,4 +65,4 @@ const roomFeatures = () => {
     )
 }
 
-export default roomFeatures
+export default RoomFeatures

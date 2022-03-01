@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Layout = ({ children, title = 'Book Best Hotels for your Holiday' }) => {
     return (
-        <div className='dark:bg-gray-800'>
+        <div>
             <Head>
                 <title>{title}</title>
                 <meta charSet='utf-8' />

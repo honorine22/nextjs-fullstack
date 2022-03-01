@@ -15,7 +15,7 @@ class MyDocument extends Document {
                         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
                     />
                 </Head>
-                <body>
+                <body className='dark:bg-gray-800'>
                     <Main />
                     <NextScript />
                 </body>
