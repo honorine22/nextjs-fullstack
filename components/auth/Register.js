@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react'
 import ButtonLoader from '../ButtonLoader'
 import { toast } from 'react-toastify'
 import { useRouter } from 'next/router'
-
 import { useDispatch, useSelector } from 'react-redux'
 import { registerUser, clearErrors } from '../../redux/actions/userActions'
+
 const Register = () => {
     const dispatch = useDispatch()
     const router = useRouter()
-
     const [user, setUser] = useState({
         name: '',
         email: '',
@@ -34,13 +33,10 @@ const Register = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-
         const userData = {
             name, email, password, avatar
         }
-
         dispatch(registerUser(userData))
-
     }
 
     const onChange = (e) => {
@@ -57,6 +53,7 @@ const Register = () => {
             setUser({ ...user, [e.target.name]: e.target.value })
         }
     }
+
     return (
         <div className='md:mx-96 lg:mx-96 my-24'>
             <form onSubmit={submitHandler}>
@@ -82,11 +79,9 @@ const Register = () => {
                     </div>
                     <div className='pl-4'>
                         <label htmlFor="avatar" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Avatar</label>
+
                         <input placeholder='Choose Avatar' className="form-control
-                                block
-                                w-full
                                 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
-                                rounded
                                 transition
                                 ease-in-out
                                 m-0"

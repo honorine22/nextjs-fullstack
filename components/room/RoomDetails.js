@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Image from 'next/image'
 import { useSelector, useDispatch } from 'react-redux'
 import { toast } from 'react-toastify'
-import RoomFeatures from './RoomFeatures'
+// import RoomFeatures from './RoomFeatures'
 import Head from 'next/head'
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -61,7 +61,7 @@ const RoomDetails = () => {
                         </button>
                     </div>
                 </div>
-                <RoomFeatures key={room} room={room} />
+                {/* <RoomFeatures key={room} room={room} /> */}
             </div>
         </>
     )
