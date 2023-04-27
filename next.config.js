@@ -13,6 +13,6 @@ module.exports = {
   },
   images: {
     domains: ['res.cloudinary.com'],
-  },
+  }
 }
 // mongodb+srv://learnnextjs:learnnextjs123@cluster0.xjzqm.mongodb.net/roomDB?retryWrites=true&w=majority

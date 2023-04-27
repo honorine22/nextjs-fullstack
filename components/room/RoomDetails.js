@@ -14,7 +14,7 @@ const RoomDetails = () => {
         toast.error(error)
         dispatch(clearErrors())
     }, [dispatch, error])
-
+    console.log(room);
     return (
         <>
             <Head>

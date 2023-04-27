@@ -1,10 +1,11 @@
 import mongoose from 'mongoose'
 const rooms = require('../data/rooms')
+require('dotenv').config()
 const dbConnect = () => {
     if (mongoose.connection.readyState >= 1) {
         return
     }
-    mongoose.connect('mongodb+srv://learnnextjs:learnnextjs123@cluster0.xjzqm.mongodb.net/learnnextjs?retryWrites=true&w=majority', {
+    mongoose.connect(process.env.URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: true,

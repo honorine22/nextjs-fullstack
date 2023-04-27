@@ -40,7 +40,7 @@ const Home = () => {
                     Back to Search</a>
                 </Link>
             </div>
-            <div className='grid mt-4 items-center grid-cols-1 lg:grid-cols-4 gap-y-16 gap-x-8'>
+            <div className='grid mt-4 items-center grid-cols-1 lg:grid-cols-4 gap-x-8'>
                 {!rooms ?
                     <div className="bg-white text-center -mr-60 mt-16 text-red-500">No Rooms Yet.</div>
                     :
@@ -49,7 +49,7 @@ const Home = () => {
                     ))
                 }
             </div>
-            {resPerPage < count &&
+            {/* {resPerPage < count &&
                 <div className='flex my-8 justify-content-center dark:text-white'>
                     <Pagination activePage={page} itemsCountPerPage={resPerPage}
                         totalItemsCount={roomsCount} onChange={handlePagination}
@@ -57,7 +57,7 @@ const Home = () => {
                         lastPageText={'Last'} linkClass='text-white no-underline border-1 border-blue-400 px-4 py-2'
                     />
                 </div>
-            }
+            } */}
         </div>
 
     )

@@ -19,7 +19,7 @@ const RoomItem = ({ room }) => {
                     {room.pricePerNight} <span className='text-gray-600 dark:text-white'> / night</span>
                 </h5>
                 <div className='flex justify-between items-center'>
-                    <div className="flex items-center mt-2.5 mb-5">
+                    <div className="flex items-center mt-2.5 mb-4">
                         <div className='rating-outer text-blue-400'>
                             <div className="rating-inner"
                                 style={{ width: `${(room.ratings / 5) * 100}%` }}>
